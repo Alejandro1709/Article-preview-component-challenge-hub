@@ -1,0 +1,167 @@
+.Card {
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.Card__Top {
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+}
+
+.Card__Bottom {
+  background-color: white;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+.Card__Bottom_Inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  margin: 0 2rem;
+}
+
+.Card__T {
+  margin-top: 2rem;
+  flex: 0.3;
+  color: #4c525e;
+}
+
+.Card__M {
+  flex: 0.4;
+  line-height: 1.5;
+  color: #91989e;
+}
+
+.Card__B {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0.3;
+}
+
+.Card__B .B__Card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.Card__B .B__Card .Card__Details h3 {
+  color: #4c525e;
+}
+
+.Card__B .B__Card .Card__Details p {
+  color: #91989e;
+}
+
+.Card__B .B__Card .Card__Details {
+  flex: auto;
+}
+
+.Card__B .B__Card #prof {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+}
+
+.Card__B .B__Card #share {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: lightgrey;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.toolTip {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 55%;
+  right: 10%;
+  width: 20%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #4c525e;
+}
+
+.toolTip .quick {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: white;
+}
+
+.toolTip .actions {
+  display: flex;
+}
+
+.toolTip .actions img {
+  margin-right: 5px;
+}
+
+@media screen and (min-width: 375px) {
+  .Card {
+    flex-direction: column;
+    height: 80vh;
+    width: 80vw;
+  }
+
+  .Card__Top {
+    flex: 0.4;
+  }
+
+  .Card__Bottom {
+    flex: 0.6;
+  }
+
+  .Card__B .B__Card .Card__Details {
+    flex: auto;
+    text-align: center;
+  }
+
+  .Card__B .B__Card #share {
+    position: static;
+  }
+
+  .toolTip {
+    position: static;
+    height: 100%;
+    width: fit-content;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    z-index: 1;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .Card {
+    flex-direction: row;
+    height: 40vh;
+    width: 60vw;
+  }
+
+  .Card__Top {
+    flex: 0.4;
+  }
+
+  .Card__Bottom {
+    flex: 0.6;
+  }
+
+  .Card__B .B__Card .Card__Details {
+    flex: auto;
+    text-align: left;
+    margin-left: 10px;
+  }
+}
