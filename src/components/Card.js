@@ -8,7 +8,7 @@ import TW from '../images/icon-twitter.svg';
 import './Card.css';
 
 function Card() {
-  let [isActive, setIsActive] = useState(true);
+  let [isActive, setIsActive] = useState(false);
 
   return (
     <div className='Card'>
